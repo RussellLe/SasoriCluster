@@ -76,11 +76,16 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(ProjectDir)3rdparty\jsoncpp\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)3rdparty\libssh\include;$(ProjectDir)3rdparty\jsoncpp\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)3rdparty\jsoncpp\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="src\cluster_launcher.cpp" />
     <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\cluster_launcher.h" />
+    <ClInclude Include="src\stdafx.h" />
   </ItemGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
